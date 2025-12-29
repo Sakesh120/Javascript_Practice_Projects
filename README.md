@@ -31,8 +31,8 @@ No frameworks. No libraries. Just pure fundamentals.
 Some example projects in this repository:
 
 - Random Quote Generator
-- Counter App
-- Color Changer
+- Love calculator App
+- Background Color Changer
 - Simple Calculator
 - Toggle Theme (Light / Dark)
 - Number Guessing Game
