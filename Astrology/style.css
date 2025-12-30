@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Background */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1b2735, #090a0f);
+  color: #fff;
+}
+
+/* Main container */
+.container {
+  width: 420px;
+  padding: 35px 40px;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 41, 59, 0.95),
+    rgba(9, 10, 15, 0.95)
+  );
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9),
+    inset 0 0 40px rgba(120, 140, 255, 0.1);
+  border: 1px solid rgba(150, 170, 255, 0.25);
+}
+
+/* Title */
+.container h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #b9c7ff;
+}
+
+/* Add subtle star emoji */
+.container h1::after {
+  content: " ✨";
+}
+
+/* Form layout */
+#astroForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Labels */
+#astroForm label {
+  font-size: 14px;
+  color: #d0d8ff;
+}
+
+/* Inputs */
+#astroForm input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(150, 170, 255, 0.3);
+  background: rgba(10, 15, 30, 0.9);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#astroForm input:focus {
+  border-color: #8fa4ff;
+  box-shadow: 0 0 10px rgba(140, 160, 255, 0.5);
+}
+
+/* Button */
+#astroForm button {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #6a7cff, #9b6dff);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button text via CSS (since HTML has no text) */
+#astroForm button::before {
+  content: "Get Insights 🔮";
+}
+
+#astroForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(120, 140, 255, 0.6);
+}
+
+/* Result box */
+.result {
+  margin-top: 25px;
+  padding: 18px 20px;
+  min-height: 60px;
+  border-radius: 12px;
+  background: rgba(10, 15, 30, 0.85);
+  border: 1px solid rgba(150, 170, 255, 0.25);
+  box-shadow: inset 0 0 25px rgba(120, 140, 255, 0.15);
+  font-size: 15px;
+  line-height: 1.5;
+  color: #e0e6ff;
+}
+
+/* Empty result hint */
+.result:empty::before {
+  content: "Your astrology insights will appear here 🌙";
+  opacity: 0.6;
+  font-style: italic;
+}
