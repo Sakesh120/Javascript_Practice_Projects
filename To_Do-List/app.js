@@ -23,8 +23,6 @@ form.addEventListener("submit", (e) => {
 
   allTask.append(parent);
 
-  form.reset();
-
   btns.addEventListener("click", (e) => {
     console.log(e.parent);
     if (e.target.textContent == "Delete") {
@@ -32,7 +30,9 @@ form.addEventListener("submit", (e) => {
     }
     if (e.target.textContent == "Done") {
       task.style.textDecoration = "line-through";
+      task.style.color = "gray";
       alert("Well done");
     }
   });
+  form.reset();
 });
